@@ -1,9 +1,6 @@
 name: Monitor demo environment
 
 on:
-  push:
-    branches:
-      - monitor-demo-env
   schedule:
     - cron: "0 */4 * * *"
   workflow_dispatch:
@@ -69,7 +66,7 @@ jobs:
           if-no-files-found: ignore
 
       - name: Notify Slack on failure
-        # if: failure()
+        if: failure()
         uses: slackapi/slack-github-action@v2.1.1
         with:
           method: chat.postMessage
