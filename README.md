@@ -1,2 +1,2 @@
 # hub-actions
-Repository containing github actions for the HUB
+Public repository containing github actions for the HUB
